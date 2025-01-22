@@ -2,12 +2,23 @@ import Button from "./Button";
 import styles from "./App.module.css";
 import { useState, useEffect } from "react";
 
+function Hello() {
+  useEffect(() => {
+    console.log("hi :)");
+    return function () {
+      console.log("bye :(");
+    };
+  }, []);
+  return <h1>Hello</h1>;
+}
+
 function App() {
   const [counter, setValue] = useState(0);
   const [keyword, setKeyword] = useState("");
+  const [showingoff, setShowingoff] = useState(false);
   const onClick = () => setValue((prev) => prev + 1);
   const onChange = (event) => setKeyword(event.target.value);
-  console.log("I run all the time! haha!");
+  const onClicked = () => setShowingoff((prev) => !prev);
   useEffect(() => {
     console.log("I run only once");
   }, []);
@@ -28,6 +39,9 @@ function App() {
       />
       <h1 className={styles.title}>{counter}</h1>
       <Button onClick={onClick} text={"click me"} />
+      <br />
+      {showingoff ? <Hello /> : null}
+      <button onClick={onClicked}>{showingoff ? "hide" : "Show"}</button>
     </div>
   );
 }

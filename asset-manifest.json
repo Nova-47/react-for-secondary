@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-for-secondary/static/css/main.d782b2af.css",
+    "main.js": "/react-for-secondary/static/js/main.800eb9ce.js",
+    "index.html": "/react-for-secondary/index.html",
+    "main.d782b2af.css.map": "/react-for-secondary/static/css/main.d782b2af.css.map",
+    "main.800eb9ce.js.map": "/react-for-secondary/static/js/main.800eb9ce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d782b2af.css",
+    "static/js/main.800eb9ce.js"
+  ]
+}
